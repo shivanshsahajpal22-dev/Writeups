@@ -119,5 +119,63 @@ sudo pacman -S package
 
 **Redirection and pipes**
 ```
-1. Overwrite file with output -> cmd > file 
+1. Overwrite file with output -> cmd > file
+2. Append output to a file -> cmd >> file
+3. Use file as input -> cmd < file
+4. Piping one command into another -> cmd 1 | cmd 2
+5. Redirect errors only -> cmd 2> errors.log
+6. Redirect both stdout and stderr -> cmd > out.log 2>&1                   
+```
+
+**Environment and shell**
+```
+1. echo $var ->  print variables
+2. Set variables equal to something -> export VAR=value
+3. Show the path of a command -> which command
+4. Create a shortcut -> alias ll="ls -la"
+5. Show command history -> history
+6. Return command 123 from history -> !123
+7. Reload shell config -> source ~/.bashrc
+8. List env variables -> env
+```
+**User and system management**
+```
+1. Current user -> whoami
+2. User/Group UID -> id
+3. Add a user (Debian family) -> adduser username  
+4. Change password -> passwd username 
+5. Switch username -> switch user 
+6. Last command with sudo -> sudo !!
+```
+**Text processing**
+```      
+1. Print first column -> awk '{print $1}' file
+2. Find and replace -> sed 's/old/new/g' file
+3. Sort files -> sort file
+4. Sort and remove duplicates -> sort -u file
+5. Remove adjacent duplicate lines -> uniq
+6. Extract column 2 from CSV -> cut -d, -f2 file
+7. Build and run commands from input -> xargs
+8. Translate characters -> tr 'a-z' 'A-Z' < file 
+```
+**System services**
+```
+1. Check service status -> systemctl status service
+2. Start a system service -> sudo systemctl start service
+3. Stop a system service ->  sudo systemctl stop service
+4. Restart a system service -> sudo systemctl restart service
+5. Start a service on boot -> sudo systemctl enable service
+6. View service logs -> journalctl -u service
+7. View live system logs -> journalctl -f      
+```
+**Handy command combos**
+```
+1. Kill a running command -> Ctrl+C
+2. Suspend a running command -> Crtl+Z
+3. Search command history -> Ctrl+R
+4. Repeat last command -> !!
+5. Manual page -> man command
+6. Quick usage help -> command --help
+7. Rerun a command in a certain interval -> watch -n 2 command
+8. Quick health check -> df -h && free -h  
 ```
