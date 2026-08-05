@@ -1,4 +1,5 @@
 ## Database Commands 
+~ Just use simple sql logic and you are good to go from a from cyber perceptive 
 
 **SQLite (`sqlite3`)**
 ```bash
