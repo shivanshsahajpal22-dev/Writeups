@@ -18,7 +18,7 @@
 
 ## Data formats
 ```
-1. 0-9a-f (or A-F), even length → hex
+1. 0-9a-f (or A-F), even length → hex / base16 
 2. A-Z a-z 0-9 + / with = padding at the end -> base64
 3. Lots of %XX sequences → URL encoding
 4. Three chunks separated by dots, starting with eyJ -> JWT
@@ -26,7 +26,10 @@
 6. -----BEGIN PGP MESSAGE----- → PGP/GPG
 7. Starts with Salted__ → output of openssl enc
 ```
+## OTHER BASE ENCODING
+```
 
+```
 ## Different hashes 
 ```
 1. 32 hex chars (128 bits) → MD5
