@@ -1,5 +1,7 @@
 # Most used Linux commands 
 
+> I highly recommend going to cmd.challenge site; it's really good to practise and learn Linux command line 
+
 **Movement-related**
 ```
 1. Current directory -> pwd
@@ -126,6 +128,7 @@ sudo pacman -S package
 5. Redirect errors only -> cmd 2> errors.log
 6. Redirect both stdout and stderr -> cmd > out.log 2>&1                   
 ```
+> You can also use xargs to pipe output of one command into the other as the arguments; this is really helpful, trust me! 
 
 **Environment and shell**
 ```
@@ -178,4 +181,22 @@ sudo pacman -S package
 6. Quick usage help -> command --help
 7. Rerun a command in a certain interval -> watch -n 2 command
 8. Quick health check -> df -h && free -h  
+```
+**My fav command - find**
+```
+1. find . -name "file.txt" — find a file by exact name in current directory
+2. find /home -name "*.txt" — find all txt files inside a specific directory
+3. find . -iname "FILE.txt" — same as name but case insensitive
+4. find . -type f — find only files (excludes directories)
+5. find . -type d — find only directories (excludes files)
+6. find . -size +10M — find files larger than 10MB
+7. find . -size -1k — find files smaller than 1KB
+8. find . -mtime -7 — find files modified in the last 7 days
+9. find . -mmin -30 — find files modified in the last 30 minutes
+10. find . -empty — find all empty files and folders
+11. find . -name "*.log" -delete — find and delete all log files in one command
+12. find . -name "*.txt" -exec cat {} \; — find files and run a command on each one
+13. find . -maxdepth 2 -name "*.txt" — search only 2 levels deep not entire tree
+14. find . -name "*.txt" -o -name "*.log" — find txt OR log files using or operator
+15. find . -not -name "*.txt" — find everything that is NOT a txt file
 ```
