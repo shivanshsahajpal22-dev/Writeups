@@ -1,6 +1,8 @@
 ## Database Commands 
 ~ Just use simple sql logic and you are good to go from a from cyber perceptive 
 
+> There is this website where you can learn SQL while playing a solving a murder game https://mystery.knightlab.com/
+
 **SQLite (`sqlite3`)**
 ```bash
 sqlite3 database.db
